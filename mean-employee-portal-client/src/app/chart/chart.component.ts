@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
+import HC_exporting from 'highcharts/modules/exporting';
+
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -48,6 +50,7 @@ export class ChartComponent {
               }]
           }
       },
+      credits:{enabled:false},
       series: [
           {
               name: 'Percentage',
@@ -79,5 +82,10 @@ export class ChartComponent {
           }
       ]
   };
+  HC_exporting(Highcharts);
   }
+
+ 
 }
+
+
